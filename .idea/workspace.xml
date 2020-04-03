@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4faa16cd-1b83-48f5-ab5c-4e7d1ef65751" name="Default Changelist" comment="" />
+    <list default="true" id="4faa16cd-1b83-48f5-ab5c-4e7d1ef65751" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExcelScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelScript.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +17,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZoMrayreyPfPEkP9YOJAdxjY0E" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -38,14 +45,18 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="360" y="223" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585929336413">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="360" y="223" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1585929336413" />
     <state x="397" y="199" key="SettingsEditor" timestamp="1585501425364">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="397" y="199" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1585501425364" />
-    <state x="550" y="379" key="com.intellij.ide.util.TipDialog" timestamp="1585872786192">
-      <screen x="0" y="23" width="1792" height="1012" />
+    <state x="550" y="394" key="com.intellij.ide.util.TipDialog" timestamp="1585926487196">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="550" y="394" key="com.intellij.ide.util.TipDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1585501195393" />
+    <state x="550" y="394" key="com.intellij.ide.util.TipDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1585926487196" />
     <state x="550" y="379" key="com.intellij.ide.util.TipDialog/0.23.1792.1012@0.23.1792.1012" timestamp="1585872786192" />
     <state x="112" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1585874613693">
       <screen x="0" y="0" width="1792" height="1120" />

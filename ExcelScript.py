@@ -11,6 +11,8 @@ root = tk.Tk()
 
 files = {'mapping': "", 'data': "", 'save path' : ""}
 
+v = tk.IntVar()
+
 def selectMapping():
     filename = filedialog.askopenfilename(initialdir= "/", title = "Select File",
                                           filetypes=(("csv","*.csv"), ("all files", "*.*") ))
@@ -72,14 +74,26 @@ def runScript():
             yearHeaders.append(year)
 
     for (columnName, columnData) in df.iteritems():
-        if (columnName == 'Area code'):
+        compareName = 'Area code' if v == 1 else 'Area'
+        if (columnName == compareName ):
             idTable = columnData.values
+
             for id in idTable:
-                row = df2.loc[df2['Area Codes'] == id]
+
+                if (v == 1):
+                    row = df2.loc[df2['Area Codes'] == id]
+                else:
+                    row = df2.loc[df2['Area Names'] == id]
+                    areaCode = df.loc[df['Area'] == id]
                 if not row.empty:
                     for year in yearHeaders:
-                        newDataFrame['Area Code'].append(id)
-                        newDataFrame['Area Names'].append(str(row['Area Names'].values[0]))
+                        if(v == 1):
+                            newDataFrame['Area Code'].append(id)
+                            newDataFrame['Area Names'].append(str(row['Area Names'].values[0]))
+                        else:
+                            newDataFrame['Area Code'].append(str(areaCode['Area code'].values[0]))
+                            newDataFrame['Area Names'].append(id)
+
                         newDataFrame['Year'].append(yearFormat(year))
                         newDataFrame[metricName].append(str(row[year].values[0]))
     df3 = pd.DataFrame(newDataFrame)
@@ -111,6 +125,22 @@ metricLabel.pack()
 
 metricEntry = Entry(root)
 metricEntry.pack()
+
+
+tk.Label(root,
+        text="""Is Area Code Present""",
+        justify = tk.LEFT,
+        padx = 20).pack()
+tk.Radiobutton(root,
+              text="Yes",
+              padx = 20,
+              variable=v,
+              value=1).pack(anchor=tk.W)
+tk.Radiobutton(root,
+              text="No",
+              padx = 20,
+              variable=v,
+              value=2).pack(anchor=tk.W)
 
 runSelectScript = tk.Button(root, text="Run Script", padx=10,
                            pady=5, fg="red", bg="#263D42", command=runScript)
