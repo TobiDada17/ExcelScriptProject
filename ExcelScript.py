@@ -56,7 +56,7 @@ def yearFormat(year):
         '2019/20': '2019',
         '2020/21': '2020'
     }
-    return switcher.get(year, "Invalid Year")
+    return switcher.get(year, year)
 
 
 def runScript():
